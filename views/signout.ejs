@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Out</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .dialog-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button {
+            padding: 8px 20px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .signout-button {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .close-button {
+            background-color: #dc3545;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="dialog-container">
+        <h2>Are you sure you want to sign out?</h2>
+        <div class="button-container">
+            <button class="button signout-button" onclick="signOut()">Sign Out</button>
+            <button class="button close-button" onclick="closeDialog()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function signOut() {
+            // Perform sign out actions here
+            alert('Signing out...');
+        }
+
+        function closeDialog() {
+            // Close the dialog box
+            var dialogContainer = document.querySelector('.dialog-container');
+            dialogContainer.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
